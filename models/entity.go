@@ -21,3 +21,21 @@ type Coordinates struct {
 	Latitude  float64 `bson:"latitude" json:"latitude"`
 	Longitude float64 `bson:"longitude" json:"longitude"`
 }
+
+type EntityDb struct {
+	IdentificationNumber uint   `gorm:"primaryKey" json:"identification_number"`
+	OriginalName         string `json:"original_name"`
+	OriginalLocality     string `json:"original_locality"`
+
+	Duns         uint   `json:"duns"`
+	Denomination string `json:"denomination"`
+	Address      string `json:"address"`
+	PostalCode   string `json:"postal_code"`
+	Locality     string `json:"locality"`
+	Cae          string `json:"cae"`
+	YearsOpen    uint   `json:"years_open"`
+	Website      string `json:"website"`
+
+	Latitude  float64 `json:"latitude"`
+	Longitude float64 `json:"longitude"`
+}
